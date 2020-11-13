@@ -4,7 +4,7 @@ const map = L.map("mapid").setView([-27.2224718, -49.6493543], 15);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 const icon = L.icon({
-  iconUrl: "./images/map-marker.svg",
+  iconUrl: "/images/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor: [29, 68],
 });
@@ -86,4 +86,13 @@ function toggleSelect(event) {
   const input = document.querySelector('[name="open_on_weekends"]')
   
   input.value = button.dataset.value
+}
+
+function validate(event) {
+  //validar se lat e lng estão preenchidos
+  const needsLatandLng = false;
+if(needsLatandLng){
+  event.preventDefault();
+  alert("Selecione um ponto no mapa")
+}
 }

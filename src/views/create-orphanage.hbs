@@ -18,7 +18,7 @@
       crossorigin=""
     ></script>
 
-    <link rel="icon" href="./images/logo-icon.png" />
+    <link rel="icon" href="/images/logo-icon.png" />
 
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/animations.css" />
@@ -36,17 +36,17 @@
   <body>
     <div id="page-create-orphanage">
       <aside class="animate-right sidebar">
-        <img src="./images/map-marker.svg" alt="Happy" />
+        <img src="/images/map-marker.svg" alt="Happy" />
 
         <footer>
           <button onclick="history.back()">
-            <img src="./images/arrow-back.svg" alt="Voltar" />
+            <img src="/images/arrow-back.svg" alt="Voltar" />
           </button>
         </footer>
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <form action="">
+        <form action="save-orphanage" method="post" onsubmit="validate(event)">
           <fieldset>
             <legend>Dados</legend>
 
@@ -88,10 +88,11 @@
                     name="images"
                     placeholder="Cole o link da foto aqui"
                     required
+                    type="url"
                   />
                   <span onclick="deleteField(event)">
                     <img
-                      src="./images/remove.file.svg"
+                      src="/images/remove.file.svg"
                       alt="Remover Foto"
                     />
                   </span>
@@ -99,7 +100,7 @@
               </div>
 
               <button onclick="addPhotoField()" type="button">
-                <img src="./images/add-file.svg" alt="Nova Imagem" />
+                <img src="/images/add-file.svg" alt="Nova Imagem" />
               </button>
             </div>
           </fieldset>
